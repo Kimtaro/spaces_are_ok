@@ -6,7 +6,7 @@ module Kernel
 
   # Modules
   def space_module(*args, &module_definition)
-    SpacesAreOk::ClassesAndModules::Module_.get(*args, &module_definition)
+    SpacesAreOk::ClassesAndModules.get_module(*args, &module_definition)
   end
 
   # Method definition

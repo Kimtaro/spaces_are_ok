@@ -1,8 +1,6 @@
 module SpacesAreOk::ClassesAndModules
   def self.get_class(original_name, superclass = Object, &class_definition)
-    name = valid_class_or_module_name_from(original_name)
-    close_enough = closest_existing_name_for(name, Class)
-    name = close_enough unless close_enough.nil?
+    name = get_name(original_name, Class)
 
     if !Object.const_defined?(name)
       Object.const_set(name, Class.new(superclass))
@@ -17,7 +15,30 @@ module SpacesAreOk::ClassesAndModules
     klass
   end
 
+  def self.get_module(original_name, &module_definition)
+    name = get_name(original_name, Module)
+
+    if !Object.const_defined?(name)
+      Object.const_set(name, Module.new)
+    end
+
+    nodule = Object.const_get(name)
+
+    if !module_definition.nil?
+      nodule.module_eval(&module_definition)
+    end
+
+    nodule
+  end
+
   private
+
+  def self.get_name(original_name, type)
+    name = valid_class_or_module_name_from(original_name)
+    close_enough = closest_existing_name_for(name, type)
+    name = close_enough unless close_enough.nil?
+    name
+  end
 
   def self.closest_existing_name_for(name, type)
     names = Module.constants.select do |c|

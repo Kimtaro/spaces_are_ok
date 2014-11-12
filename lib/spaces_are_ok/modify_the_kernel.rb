@@ -24,7 +24,7 @@ module Kernel
 end
 
 class String
-  def •@
+  def +@
     space_class(self)
   end
 end

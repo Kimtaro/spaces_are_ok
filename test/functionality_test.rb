@@ -41,6 +41,10 @@ class SpacesAreOkTest < Minitest::Test
     assert_equal "Hi, Kim!", space_class("Greet the world").new("Kim").hi
   end
 
+  def test_unary_op
+    assert_equal "Hi, Kim!", space_class("Greet the world").new("Kim").hi
+  end
+
   def test_misspelled_class
     assert_equal space_class("Greet the world"), space_class("Kreet the vorld")
   end

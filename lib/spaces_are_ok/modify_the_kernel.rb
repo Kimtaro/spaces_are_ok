@@ -22,3 +22,9 @@ module Kernel
     send(SpacesAreOk::Methods.invoke_a_method(actual_name), *args, &block)
   end
 end
+
+class String
+  def •@
+    space_class(self)
+  end
+end

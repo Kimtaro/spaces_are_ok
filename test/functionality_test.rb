@@ -11,6 +11,14 @@ space_class("Greet the world") do
     greet("Hi")
   end
 
+  space_method_def "say good bye", def a1
+    "Good bye, #{@name}"
+  end
+
+  space_method_def "say good afternoon", def a2
+    "Good afternoon, #{@name}"
+  end
+
   private
 
   def greet(greeting)
@@ -55,5 +63,13 @@ class SpacesAreOkTest < Minitest::Test
 
   def test_misspelled_module
     assert_equal space_module("A greeter"), space_module("B greeter")
+  end
+
+  def test_method
+    assert_equal "Good afternoon, Kim", space_class("Greet the world").new("Kim").space_method("Say good afternoon")
+  end
+
+  def test_misspelled_method
+    assert_equal "Good afternoon, Kim", space_class("Greet the world").new("Kim").space_method("Say good afternooon")
   end
 end

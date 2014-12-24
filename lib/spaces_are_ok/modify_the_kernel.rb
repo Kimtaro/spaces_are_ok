@@ -11,14 +11,14 @@ module Kernel
 
   # Method definition
   def space_method_def(original_name, actual_method_name)
-    new_name = SpacesAreOk::Methods.make_a_method(original_name)
+    new_name = SpacesAreOk::Methods.get_method(original_name, binding)
     binding.eval <<-EOS
       alias_method :#{new_name}, :#{actual_method_name}
     EOS
   end
 
   # Method invocation
-  def space_method(actual_name, *args, &block)
-    send(SpacesAreOk::Methods.invoke_a_method(actual_name), *args, &block)
+  def space_method(original_name, *args, &block)
+    send(SpacesAreOk::Methods.get_method(original_name, binding), *args, &block)
   end
 end

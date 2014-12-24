@@ -1,37 +1,43 @@
 module SpacesAreOk::ClassesAndModules
   def self.get_class(original_name, superclass = Object, &class_definition)
-    name = get_name(original_name, Class)
-
-    if !Object.const_defined?(name)
-      Object.const_set(name, Class.new(superclass))
-    end
-
-    klass = Object.const_get(name)
-
-    if !class_definition.nil?
-      klass.class_eval(&class_definition)
-    end
-
-    klass
+    creator = -> { Class.new(superclass) }
+    define_or_get_module_or_class(
+      original_name,
+      Class,
+      :class_eval,
+      creator,
+      &class_definition
+    )
   end
 
   def self.get_module(original_name, &module_definition)
-    name = get_name(original_name, Module)
-
-    if !Object.const_defined?(name)
-      Object.const_set(name, Module.new)
-    end
-
-    nodule = Object.const_get(name)
-
-    if !module_definition.nil?
-      nodule.module_eval(&module_definition)
-    end
-
-    nodule
+    creator = -> { Module.new }
+    define_or_get_module_or_class(
+      original_name,
+      Module,
+      :module_eval,
+      creator,
+      &module_definition
+    )
   end
 
   private
+
+  def self.define_or_get_module_or_class(original_name, type, evaluator, creator, &body)
+    name = get_name(original_name, type)
+
+    if !Object.const_defined?(name)
+      Object.const_set(name, creator.call)
+    end
+
+    module_or_class = Object.const_get(name)
+
+    if !body.nil?
+      module_or_class.send(evaluator, &body)
+    end
+
+    module_or_class
+  end
 
   def self.get_name(original_name, type)
     name = valid_class_or_module_name_from(original_name)

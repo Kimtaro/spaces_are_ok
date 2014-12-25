@@ -1,5 +1,5 @@
 $: << File.expand_path('../lib', __FILE__)
-require 'minitest/autorun'
+require 'maxitest/autorun'
 require 'spaces_are_ok'
 
 space_class("Greet the world") do

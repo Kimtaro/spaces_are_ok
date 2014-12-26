@@ -1,6 +1,6 @@
-# SpacesAreOk
+[![Build Status](https://travis-ci.org/Kimtaro/spaces_are_ok.svg)](https://travis-ci.org/Kimtaro/spaces_are_ok) [![Code Climate](https://codeclimate.com/github/Kimtaro/spaces_are_ok/badges/gpa.svg)](https://codeclimate.com/github/Kimtaro/spaces_are_ok)
 
-[![Build Status](https://travis-ci.org/Kimtaro/spaces_are_ok.svg)](https://travis-ci.org/Kimtaro/spaces_are_ok)
+# SpacesAreOk
 
 TODO: Write a gem description
 

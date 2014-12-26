@@ -11,11 +11,11 @@ space_class("Greet the world") do
     greet("Hi")
   end
 
-  space_method_def "say good bye", def a1
+  space_method_def "say good bye", def _
     "Good bye, #{@name}"
   end
 
-  space_method_def "say good afternoon", def a2
+  space_method_def "say good afternoon", def _
     "Good afternoon, #{@name}"
   end
 
@@ -67,9 +67,11 @@ class SpacesAreOkTest < Minitest::Test
 
   def test_method
     assert_equal "Good afternoon, Kim", space_class("Greet the world").new("Kim").space_method("Say good afternoon")
+    assert_equal "Good bye, Kim", space_class("Greet the world").new("Kim").space_method("Say good bye")
   end
 
   def test_misspelled_method
     assert_equal "Good afternoon, Kim", space_class("Greet the world").new("Kim").space_method("Say good afternooon")
+    assert_equal "Good bye, Kim", space_class("Greet the world").new("Kim").space_method("Say good buy")
   end
 end

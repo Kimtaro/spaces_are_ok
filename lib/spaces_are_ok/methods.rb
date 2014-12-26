@@ -16,7 +16,7 @@ module SpacesAreOk::Methods
   private
 
   def self.closest_method_name(name, the_binding)
-    ms = the_binding.eval("methods") + the_binding.eval("private_methods")
-    ms.find_all { |m| RubyFish::Levenshtein.distance(name, m) <= 3 }.sort_by(&:size).first
+    all_methods = the_binding.eval("methods") + the_binding.eval("private_methods")
+    SpacesAreOk::find_a_matching_name(all_methods, name)
   end
 end

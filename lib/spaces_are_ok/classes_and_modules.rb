@@ -52,11 +52,7 @@ module SpacesAreOk::ClassesAndModules
       Module.const_get(c).is_a?(type)
     end
 
-    names = names.find_all do |c|
-      RubyFish::Levenshtein.distance(name, c) <= 3
-    end
-
-    names.sort_by(&:size).first
+    SpacesAreOk::find_a_matching_name(names, name)
   end
 
   def self.valid_class_or_module_name_from(original_name)

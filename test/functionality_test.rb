@@ -45,12 +45,12 @@ space_class("I do nothing on my own") do
 end
 
 class SpacesAreOkTest < Minitest::Test
-  def test_instance_method_invocation_on_classes
-    assert_equal "Hi, Kim!", space_class("Greet the world").new("Kim").hi
+  def setup
+    require 'spaces_are_ok'
   end
 
-  def test_misspelled_class
-    assert_equal space_class("Greet the world"), space_class("Kreet the vorld")
+  def test_instance_method_invocation_on_classes
+    assert_equal "Hi, Kim!", space_class("Greet the world").new("Kim").hi
   end
 
   def test_subclass
@@ -61,13 +61,23 @@ class SpacesAreOkTest < Minitest::Test
     assert_equal "Hello!", space_class("I do nothing on my own").new.greet
   end
 
-  def test_misspelled_module
-    assert_equal space_module("A greeter"), space_module("B greeter")
-  end
-
   def test_method
     assert_equal "Good afternoon, Kim", space_class("Greet the world").new("Kim").space_method("Say good afternoon")
     assert_equal "Good bye, Kim", space_class("Greet the world").new("Kim").space_method("Say good bye")
+  end
+end
+
+class SpacesAreOkAndDontWorryAboutSpellingTest < Minitest::Test
+  def setup
+    require 'spaces_are_ok/dont_worry_about_spelling'
+  end
+
+  def test_misspelled_class
+    assert_equal space_class("Greet the world"), space_class("Kreet the vorld")
+  end
+
+  def test_misspelled_module
+    assert_equal space_module("A greeter"), space_module("B greeter")
   end
 
   def test_misspelled_method

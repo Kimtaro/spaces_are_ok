@@ -1,3 +1,6 @@
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 $: << File.expand_path('../lib', __FILE__)
 require 'maxitest/autorun'
 require 'spaces_are_ok'

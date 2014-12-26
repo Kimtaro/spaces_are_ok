@@ -1,5 +1,7 @@
 # SpacesAreOk
 
+[![Build Status](https://travis-ci.org/Kimtaro/spaces_are_ok.svg)](https://travis-ci.org/Kimtaro/spaces_are_ok)
+
 TODO: Write a gem description
 
 ## Installation

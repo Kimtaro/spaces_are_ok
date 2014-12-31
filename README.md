@@ -71,7 +71,7 @@ Probably not.
 
 ## Ideas for improvement
 
-- I haven't been able to figure out an elegant way of doing this for variable names. I would prefer space_variable("Number of vowels") over vwl_ctr. Wouldn't you?
+- I haven't been able to figure out a way of doing this for variable names. I would prefer `space_variable("Number of vowels")` over `vwl_ctr`. Wouldn't you?
 - Patch Ruby so we could have this as a feature in the language. It could look something like this:
 
 ```ruby

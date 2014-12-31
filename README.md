@@ -67,6 +67,21 @@ greeter.space_method("Say hello") # => Hello, Kim!
 
 Probably not.
 
+## Ideas for improvement
+
+- I haven't been able to figure out an elegant way of doing this for variable names. I would prefer space_variable("Number of vowels") over vwl_ctr. Wouldn't you?
+- Patch Ruby so we could have this as a feature in the language. It could look something like this:
+
+```ruby
+class “Weather forecast”
+  def ‘will it rain tomorrow?’
+    puts "Time will tell"
+  end
+end
+
+“Weather forecast”.new.‘will it rain tomorrow?’ # => Time will tell
+```
+
 ## Contributing
 
 1. Fork it

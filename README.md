@@ -4,6 +4,8 @@
 
 Use natural language in your Ruby class and method names.
 
+Like this
+
 ```ruby
 space_class("Scorecard for a player").new("Picard").space_method("Calculate the score from a game", game)
 ```
@@ -14,13 +16,13 @@ or the fancier
 ç("Scorecard for a player").new("Picard").ƒ("Calculate the score from a game", game)
 ```
 
-instead of
+instead of the mechanical
 
 ```ruby
 ScorecardForPlayer.new("Picard").calculate_new_score(game)
 ```
 
-or
+or the uninformational
 
 ```ruby
 Scorecard.new("Picard").score(game)

@@ -88,3 +88,39 @@ class SpacesAreOkAndDontWorryAboutSpellingTest < Minitest::Test
     assert_equal "Good bye, Kim", space_class("Greet the world").new("Kim").space_method("Say good buy")
   end
 end
+
+ç("Test fancy class names", Minitest::Test) do
+  def self.a
+    "a"
+  end
+
+  def test_using_the_class_name
+    assert_equal "a", ç("Test fancy class names").a
+  end
+end
+
+ç("Test fancy module names", Minitest::Test) do
+  ɱ("Module for a") do
+    def a
+      "a"
+    end
+  end
+
+  extend ɱ("Module for a")
+
+  def test_using_the_class_name
+    assert_equal "a", ç("Test fancy module names").a
+  end
+end
+
+ç("Test fancy method names", Minitest::Test) do
+  class << self
+    ∂ƒ "return a", def _
+      "a"
+    end
+  end
+
+  def test_using_the_method_name
+    assert_equal "a", ç("Test fancy method names").ƒ("return a")
+  end
+end

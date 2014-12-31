@@ -8,6 +8,12 @@ Use natural language in your Ruby class and method names.
 space_class("Scorecard for a player").new("Picard").space_method("Calculate the score from a game", game)
 ```
 
+or the fancier
+
+```ruby
+ç("Scorecard for a player").new("Picard").ƒ("Calculate the score from a game", game)
+```
+
 instead of
 
 ```ruby
@@ -66,6 +72,29 @@ end
 greeter = space_class("Greet someone").new("Kim")
 greeter.space_method("Say hello") # => Hello, Kim!
 ```
+
+Since it gets rather tedious to write `space_` all the time, I have included shorthand versions, so the above could be written like this:
+
+```ruby
+require 'spaces_are_ok'
+
+ç("Greet someone") do
+  def initialize(name)
+    @name = name
+  end
+
+  ∂ƒ "Say hello", def _
+    "Hello, #{@name}"
+  end
+end
+
+greeter = ç("Greet someone").new("Kim")
+greeter.ƒ("Say hello") # => Hello, Kim!
+```
+
+### Classes, Modules, Methods
+
+TODO: List all the things this gem provides.
 
 ## But should I use it?
 

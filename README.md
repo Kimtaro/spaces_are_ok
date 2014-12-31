@@ -46,6 +46,8 @@ Or install it yourself as:
 
 ## Usage
 
+Unfortunately we can't use this with the regular keywords `class` and `def`, so we have to use slightly different syntax when defining and using our space friendly names. But it's not too bad.
+
 ```ruby
 require 'spaces_are_ok'
 

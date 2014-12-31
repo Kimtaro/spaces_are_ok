@@ -32,6 +32,8 @@ Naming things is famously one of the hard things in computer science, and our la
 
 ## Installation
 
+This gem requires Ruby 2.1 or newer.
+
 Add this line to your application's Gemfile:
 
     gem 'spaces_are_ok'

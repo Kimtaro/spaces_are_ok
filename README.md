@@ -5,13 +5,19 @@
 Use natural language in your Ruby class and method names.
 
 ```ruby
-space_class("Scorecard for a player").new("Picard").space_method("Calculate new score", game)
+space_class("Scorecard for a player").new("Picard").space_method("Calculate the score from a game", game)
 ```
 
 instead of
 
 ```ruby
-ScoreCardForAPlayer.new("Picard").calculate_new_score(game)
+ScorecardForPlayer.new("Picard").calculate_new_score(game)
+```
+
+or
+
+```ruby
+Scorecard.new("Picard").score(game)
 ```
 
 ## Why

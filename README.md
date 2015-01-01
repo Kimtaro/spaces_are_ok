@@ -94,9 +94,12 @@ greeter = ç("Greet someone").new("Kim")
 greeter.ƒ("Say hello") # => Hello, Kim!
 ```
 
-### Classes, Modules, Methods
+### Summary of functionality
 
-TODO: List all the things this gem provides.
+Function | Plain Ruby | Spaces Are Ok | Spaces Are Ok shorthand
+----------------------------------------
+Define a class | `class LaunchSpaceShip /.../ end` | `space_class("Launch space ship") do /.../ end ` | `ç("Launch space ship") do /.../ end `
+Use a class | `LaunchSpaceShip.new` | `space_class("Launch space ship").new` | `ç("Launch space ship").new`
 
 ### You don't have to care about spelling
 

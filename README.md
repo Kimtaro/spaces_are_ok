@@ -10,19 +10,19 @@ Like this
 space_class("Scorecard for a player").new("Picard").space_method("Calculate the score from a game", game)
 ```
 
-or the fancier
+or the shorter and fancier
 
 ```ruby
 ç("Scorecard for a player").new("Picard").ƒ("Calculate the score from a game", game)
 ```
 
-instead of the mechanical
+instead of the mechanical and boring
 
 ```ruby
 ScorecardForPlayer.new("Picard").calculate_new_score(game)
 ```
 
-or the uninformational
+or the not very informative
 
 ```ruby
 Scorecard.new("Picard").score(game)

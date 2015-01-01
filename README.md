@@ -97,7 +97,7 @@ greeter.ƒ("Say hello") # => Hello, Kim!
 ### Summary of functionality
 
 Function | Plain Ruby | Spaces Are Ok | Spaces Are Ok shorthand
-----------------------------------------
+-------|--------|------------|----------
 Define a class | `class LaunchSpaceShip /.../ end` | `space_class("Launch space ship") do /.../ end ` | `ç("Launch space ship") do /.../ end `
 Use a class | `LaunchSpaceShip.new` | `space_class("Launch space ship").new` | `ç("Launch space ship").new`
 

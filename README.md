@@ -56,7 +56,7 @@ Or install it yourself as:
 
 ## Usage
 
-Unfortunately we can't use this with the regular keywords `class` and `def`, so we have to use slightly different syntax when defining and using our space friendly names. But it's not too bad.
+Ruby doesn't allow method calls with the keywords `class` and `def`, so we have to use slightly different syntax when defining and using our space friendly names. But it's not too bad.
 
 ```ruby
 require 'spaces_are_ok'
@@ -75,7 +75,7 @@ greeter = space_class("Greet someone").new("Kim")
 greeter.space_method("Say hello") # => Hello, Kim!
 ```
 
-Since it gets rather tedious to write `space_` all the time, I have included shorthand versions, so the above could be written like this:
+Since it gets rather tedious to write `space_` all the time, I have included shorthand versions, so the above can be written like this:
 
 ```ruby
 require 'spaces_are_ok'
@@ -97,6 +97,27 @@ greeter.ƒ("Say hello") # => Hello, Kim!
 ### Classes, Modules, Methods
 
 TODO: List all the things this gem provides.
+
+### You don't have to care about spelling
+
+If you're the adventurous type and don't want to worry about speling everything correctly all the time, then you don't have have to. Just turn on the `dont_worry_about_spelling`-mode.
+
+```ruby
+require 'spaces_are_ok/dont_worry_about_spelling'
+
+space_class("Greet someone") do
+  def initialize(name)
+    @name = name
+  end
+
+  space_method_def "Say hello", def _
+    "Hello, #{@name}"
+  end
+end
+
+greeter = space_class("Greeet someone").new("Kim")
+greeter.space_method("Say jello") # => Hello, Kim!
+```
 
 ## But should I use it?
 

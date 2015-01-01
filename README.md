@@ -100,6 +100,10 @@ Function | Plain Ruby | Spaces Are Ok | Spaces Are Ok shorthand
 -------|--------|------------|----------
 Define a class | `class LaunchSpaceShip /.../ end` | `space_class("Launch space ship") do /.../ end ` | `ç("Launch space ship") do /.../ end `
 Use a class | `LaunchSpaceShip.new` | `space_class("Launch space ship").new` | `ç("Launch space ship").new`
+Define a module | `module SpaceShipMotor /.../ end` | `space_module("Space ship motor") do /.../ end ` | `ɱ("Space ship motor") do /.../ end `
+Use a module | `SpaceShipMotor.new` | `space_module("Space ship motor").new` | `ɱ("Space ship motor").new`
+Define a method | `def travel_to_a_planet(planet) /.../ end` | `space_method_def("Travel to a planet"), def _(planet) /.../ end ` | `∂ƒ("Travel to a planet"), def_(planet) /.../ end `
+Call a method | `travel_to_a_planet(planet)` | `space_method("Travel to a planet", planet)` | `ƒ("Travel to a planet", planet)`
 
 ### You don't have to care about spelling
 

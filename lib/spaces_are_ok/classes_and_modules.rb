@@ -56,7 +56,7 @@ module SpacesAreOk::ClassesAndModules
   end
 
   def self.valid_class_or_module_name_from(original_name)
-    name = original_name.gsub(%r< [^a-z0-9_] >ix, '').downcase
+    name = SpacesAreOk::make_a_valid_name(original_name, '')
     name = "a_#{name}" if name.match(%r<^ [^a-z] >x)
     name.capitalize
   end

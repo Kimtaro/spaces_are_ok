@@ -52,6 +52,10 @@ class SpacesAreOkTest < Minitest::Test
     require 'spaces_are_ok'
   end
 
+  def test_make_a_valid_name
+    assert_equal "36__228__ncc45_170145_d47_12472_12515_12531_65309_12522_12517_12483_12463_12539_12500_12459_12540_12489_", SpacesAreOk::make_a_valid_name('$_ä_ncc-1701-d/ジャン＝リュック・ピカード', '_')
+  end
+
   def test_instance_method_invocation_on_classes
     assert_equal "Hi, Kim!", space_class("Greet the world").new("Kim").hi
   end

@@ -30,13 +30,9 @@ Scorecard.new("Picard").score(game)
 
 ## Why
 
-There is always a lot of exciting development going on in the world of programming. New languages like Rust and Go, new versions of existing ones like Ruby, Javascript, and even C. Faster runtimes, cool language features and safer memory!
+Naming things is famously one of the hard things in computer science[*](http://martinfowler.com/bliki/TwoHardThings.html), but programming languages aren't doing a very good job of helping us write fun and descriptive language.
 
-But they all look the same way they've always looked. `YouEhitherHaveThis` or `you_see_some_of_this`. They might even `SHOUT_AT_YOU`.
-
-Why do we not spend as much time making programming languages look like something humans read as we spend on compiler optimisations and replacing fine words like `function` with uninformative symbols like `=>`?
-
-Naming things is famously one of the hard things in computer science, and our languages aren't doing a very good job of helping us use descriptive and fun language. This gem is an experiment in fixing that.
+What if instead of `WritingLikeThis`, `having_to_read_this` or `BEING_SHOUTEN_AT` we could write and read regular language? Maybe it will help us write better programs? Or maybe it won't. But I thought it would be a fun experiment.
 
 ## Installation
 

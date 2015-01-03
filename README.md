@@ -275,7 +275,8 @@ end
 1. Fork it
 2. Install the dependencies (`bundle install`)
 3. Create your feature branch (`git checkout -b my-new-feature`)
-4. Commit your changes (`git commit -am 'Add some feature'`)
-5. Push to the branch (`git push origin my-new-feature`)
-6. Run the tests (`mtest test.rb`)
-7. Create new Pull Request
+4. Make your changes
+5. Run the tests (`mtest test.rb`)
+6. Commit your changes (`git commit -am 'Add some feature'`)
+7. Push to the branch (`git push origin my-new-feature`)
+8. Create new Pull Request

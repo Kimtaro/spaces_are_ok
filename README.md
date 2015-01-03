@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/Kimtaro/spaces_are_ok.svg)](https://travis-ci.org/Kimtaro/spaces_are_ok) [![Code Climate](https://codeclimate.com/github/Kimtaro/spaces_are_ok/badges/gpa.svg)](https://codeclimate.com/github/Kimtaro/spaces_are_ok) [![Test Coverage](https://codeclimate.com/github/Kimtaro/spaces_are_ok/badges/coverage.svg)](https://codeclimate.com/github/Kimtaro/spaces_are_ok)
+[![Build Status](https://travis-ci.org/Kimtaro/spaces_are_ok.svg)](https://travis-ci.org/Kimtaro/spaces_are_ok) [![Code Climate](https://codeclimate.com/github/Kimtaro/spaces_are_ok/badges/gpa.svg)](https://codeclimate.com/github/Kimtaro/spaces_are_ok) [![Test Coverage](https://codeclimate.com/github/Kimtaro/spaces_are_ok/badges/coverage.svg)](https://codeclimate.com/github/Kimtaro/spaces_are_ok) [`spaces_are_ok` on Rubygems](https://rubygems.org/gems/spaces_are_ok)
 
 # Spaces Are Ok
 

@@ -96,8 +96,6 @@ greeter.ƒ("Say hello") # => Hello, Kim!
 
 ### Summary of functionality
 
-Function | Plain Ruby | Spaces Are Ok | Spaces Are Ok shorthand
-
 #### Defining a class
 
 ##### Plain Ruby

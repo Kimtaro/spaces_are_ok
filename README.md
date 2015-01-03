@@ -97,13 +97,144 @@ greeter.ƒ("Say hello") # => Hello, Kim!
 ### Summary of functionality
 
 Function | Plain Ruby | Spaces Are Ok | Spaces Are Ok shorthand
--------|--------|------------|----------
-Define a class | `class LaunchSpaceShip /.../ end` | `space_class("Launch space ship") do /.../ end ` | `ç("Launch space ship") do /.../ end `
-Use a class | `LaunchSpaceShip.new` | `space_class("Launch space ship").new` | `ç("Launch space ship").new`
-Define a module | `module SpaceShipMotor /.../ end` | `space_module("Space ship motor") do /.../ end ` | `ɱ("Space ship motor") do /.../ end `
-Use a module | `include SpaceShipMotor` | `include space_module("Space ship motor")` | `include ɱ("Space ship motor")`
-Define a method | `def travel_to_a_planet(planet) /.../ end` | `space_method_def("Travel to a planet"), def _(planet) /.../ end ` | `∂ƒ("Travel to a planet"), def_(planet) /.../ end `
-Call a method | `travel_to_a_planet(planet)` | `space_method("Travel to a planet", planet)` | `ƒ("Travel to a planet", planet)`
+
+#### Defining a class
+
+##### Plain Ruby
+
+```ruby
+class LaunchSpaceShip
+  # Class definition
+end
+```
+
+##### Spaces Are Ok
+
+```ruby
+space_class("Launch space ship") do
+  # Class definition
+end
+```
+
+##### Spaces Are Ok shorthand
+
+```ruby
+ç("Launch space ship") do
+  # Class definition
+end
+```
+
+#### Using a class
+
+##### Plain Ruby
+
+```ruby
+LaunchSpaceShip.new
+```
+
+##### Spaces Are Ok
+
+```ruby
+space_class("Launch space ship").new
+```
+
+##### Spaces Are Ok shorthand
+
+```ruby
+ç("Launch space ship").new
+```
+
+#### Defining a module
+
+#####Plain Ruby
+
+```ruby
+module SpaceShipMotor
+  # Module definition
+end
+```
+
+##### Spaces Are Ok
+
+```ruby
+space_module("Space ship motor") do
+  # Module definition
+end
+```
+
+##### Spaces Are Ok shorthand
+
+```ruby
+ɱ("Space ship motor") do
+  # Module definition
+end
+```
+
+#### Using a module
+
+##### Plain Ruby
+
+```ruby
+include SpaceShipMotor
+```
+
+##### Spaces Are Ok
+
+```ruby
+include space_module("Space ship motor")
+```
+
+##### Spaces Are Ok shorthand
+
+```ruby
+include ɱ("Space ship motor")
+```
+
+#### Defining a method
+
+##### Plain Ruby
+
+```ruby
+def travel_to_a_planet(planet)
+  # Method body
+end
+```
+
+##### Spaces Are Ok
+
+```ruby
+space_method_def("Travel to a planet"), def _(planet)
+  # Method body
+end
+```
+
+##### Spaces Are Ok shorthand
+
+```ruby
+∂ƒ("Travel to a planet"), def_(planet)
+  # Method body
+end
+```
+
+#### Calling a method
+
+##### Plain Ruby
+
+```ruby
+travel_to_a_planet(planet)
+```
+
+##### Spaces Are Ok
+
+```ruby
+space_method("Travel to a planet", planet)
+```
+
+##### Spaces Are Ok shorthand
+
+```ruby
+ƒ("Travel to a planet", planet)
+```
 
 ### You don't have to care about spelling
 

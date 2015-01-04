@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = SpacesAreOk::VERSION
   spec.authors       = ["Kim Ahlström"]
   spec.email         = ["kim.ahlstrom@gmail.com"]
-  spec.description   = %q{Allows the use of strings as class names, module names and method names}
-  spec.summary       = %q{Use strings as class, module and method names}
+  spec.description   = %q{Allows the use of natural language as class names, module names and method names}
+  spec.summary       = %q{Use natural language as class, module and method names}
   spec.homepage      = "https://github.com/Kimtaro/spaces_are_ok"
   spec.license       = "MIT"
   spec.required_ruby_version = '~> 2.1'

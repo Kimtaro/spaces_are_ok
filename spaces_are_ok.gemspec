@@ -10,8 +10,9 @@ Gem::Specification.new do |spec|
   spec.email         = ["kim.ahlstrom@gmail.com"]
   spec.description   = %q{Allows the use of strings as class names, module names and method names}
   spec.summary       = %q{Use strings as class, module and method names}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/Kimtaro/spaces_are_ok"
   spec.license       = "MIT"
+  spec.required_ruby_version = '~> 2.1'
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
